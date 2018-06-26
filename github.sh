@@ -19,3 +19,4 @@ if [ "$CODEBUILD_BUILD_SUCCEEDING" -eq 0 ]; then
  else
  curl -X POST "https://api.github.com/repos/felvis/build-servers-check/pulls/$PL_NUMBER/reviews" -H "authorization: Bearer $TOKEN" -H "content-type: application/json" -d '{"body":"APPROVED. Link to artifacts - https://s3.amazonaws.com/com.shadowrobot.eu-open/'$BUILD_ID'/"}'; 
  fi
+
